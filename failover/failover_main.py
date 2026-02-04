@@ -1,6 +1,3 @@
-from netmiko import ConnectHandler
-from getpass import getpass
-import re
 from jinja2 import Environment, FileSystemLoader
 import sys
 
