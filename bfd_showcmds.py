@@ -2,7 +2,7 @@ from netmiko import ConnectHandler
 from getpass import getpass
 import re
 
-uname = 'valet027'
+uname = input('Enter username: ')
 pwd = getpass('Enter password: ')
 
 rtr_lst = ['aandlr-attr0-gw.net.disney.com', 'eorcrp-1120lab1-gw.net.disney.com']
