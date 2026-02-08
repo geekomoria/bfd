@@ -7,7 +7,7 @@ if len(sys.argv) != 3:
     sys.exit(1)
     
 # Load Jinja2 environment (looks for templates in current directory)
-env = Environment(loader=FileSystemLoader('/home/local/WDW/valet027/gscripts/failover/'))
+env = Environment(loader=FileSystemLoader('.'))
 template = env.get_template('bgpfo.j2')
 
 #render interface input
