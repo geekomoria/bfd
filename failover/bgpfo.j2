@@ -1,0 +1,29 @@
+
+
+## PRE and POST TEST ##
+
+show bgp all all summ | i {{ BGPNEI }}
+ping {{ BGPNEI }} repeat 1000 df size 9086
+
+
+
+## IMPLEMENTATION PLAN ##
+
+
+conf t
+!
+router bgp {{ BGPAS }} neighbor {{ BGPNEI }} shutdown
+commit
+end
+
+
+
+
+## BACKOUT PLAN ##
+
+conf t
+!
+no router bgp {{ BGPAS }} neighbor {{ BGPNEI }} shutdown
+commit
+end
+
